@@ -7,7 +7,7 @@ import VersionSelector from '../common/VersionSelector'
 import DiffViewer from '../common/DiffViewer'
 import Settings from '../common/Settings'
 import { homepage } from '../../../package.json'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/128x128-Favicon-Dark_Purple.png'
 import { SHOW_LATEST_RCS } from '../../utils'
 
 const Page = styled.div`
@@ -37,6 +37,11 @@ const LogoImg = styled.img`
 const TitleHeader = styled.h1`
   margin: 0;
   margin-left: 15px;
+`
+
+const Credits = styled.footer`
+  position: fixed;
+  bottom: 0;
 `
 
 const StarButton = styled(({ className, ...props }) => (
@@ -89,13 +94,13 @@ const Home = () => {
       <Container>
         <TitleContainer>
           <LogoImg
-            alt="React Native Upgrade Helper logo"
-            title="React Native Upgrade Helper logo"
+            alt="Blitz.js Upgrade Helper logo"
+            title="Blitz.js Upgrade Helper logo"
             src={logo}
           />
 
           <a href={homepage}>
-            <TitleHeader>React Native Upgrade Helper</TitleHeader>
+            <TitleHeader>Blitz.js Upgrade Helper</TitleHeader>
           </a>
 
           <StarButton
@@ -126,6 +131,15 @@ const Home = () => {
         toVersion={toVersion}
         appName={appName}
       />
+
+      <Credits>
+        All credits to ❤
+        <a href="https://github.com/react-native-community/upgrade-helper">
+          {' '}
+          React Native Community{' '}
+        </a>
+        ❤
+      </Credits>
     </Page>
   )
 }

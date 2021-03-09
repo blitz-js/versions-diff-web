@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/src/assets/logo.svg" width="150" />
+  <img src="/src/assets/128x128-Favicon-Dark_Purple.png" width="128" />
 </p>
 
 <h1 align="center">Upgrade Helper</h1>

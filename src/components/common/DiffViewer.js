@@ -15,6 +15,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms))
 
 const Container = styled.div`
   width: 90%;
+  margin-bottom: 15px;
 `
 
 const getDiffKey = ({ oldRevision, newRevision }) =>
@@ -105,12 +106,16 @@ const DiffViewer = ({
     ])
 
     const diff = await response.text()
-
-    setDiff(
-      parseDiff(diff).sort(({ newPath }) =>
+    let sortedDiff = []
+    try {
+      sortedDiff = parseDiff(diff).sort(({ newPath }) =>
         newPath.includes('package.json') ? -1 : 1
       )
-    )
+    } catch (error) {
+      console.log(error)
+    }
+
+    setDiff(sortedDiff)
 
     setLoading(false)
   }, [fromVersion, toVersion])

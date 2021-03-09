@@ -280,7 +280,7 @@ const VersionSelector = ({ showDiff, showReleaseCandidates }) => {
     <Fragment>
       <Selectors>
         <FromVersionSelector
-          title="What's your current React Native version?"
+          title="What's your current Blitz.js version?"
           loading={isLoading}
           value={localFromVersion}
           options={fromVersionList}
