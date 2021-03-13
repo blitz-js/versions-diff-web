@@ -5,7 +5,7 @@
 <h1 align="center">Upgrade Helper</h1>
 
 <p align="center">
-  A web tool to help you upgrade your React Native app with ease! 🚀
+  A web tool to help you upgrade your Blitz app with ease! 🚀
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
 
 The **Upgrade Helper** tool aims to provide the full set of changes happening between any two versions, based on the previous work done in the [rn-diff-purge](https://github.com/react-native-community/rn-diff-purge) project:
 
-> This repository exposes an untouched React Native app generated with the CLI `react-native init RnDiffApp`. Each new React Native release causes a new project to be created, removing the old one, and getting a diff between them. This way, the diff is always clean, always in sync with the changes of the init template.
+> This repository exposes an untouched Blitz app generated with the CLI `blitz new BlitzDiffApp`. Each new Blitz release causes a new project to be created, removing the old one, and getting a diff between them. This way, the diff is always clean, always in sync with the changes of the init template.
 
 This will help you see what changes you need to do in your code.
 
