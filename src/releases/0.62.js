@@ -18,8 +18,7 @@ export default {
       {
         title:
           '[iOS] Tutorial on upgrading Xcode-related files to React Native 0.62',
-        url:
-          'https://github.com/react-native-community/upgrade-helper/issues/191'
+        url: 'https://github.com/blitz-js/versions-diff-web/issues/191'
       }
     ]
   },

@@ -104,10 +104,10 @@ const Home = () => {
           </a>
 
           <StarButton
-            href="https://github.com/react-native-community/upgrade-helper"
+            href="https://github.com/blitz-js/versions-diff-web"
             data-icon="octicon-star"
             data-show-count="true"
-            aria-label="Star react-native-community/upgrade-helper on GitHub"
+            aria-label="Star blitz-js/versions-diff-web on GitHub"
           >
             Star
           </StarButton>
@@ -134,7 +134,7 @@ const Home = () => {
 
       <Credits>
         All credits to ❤
-        <a href="https://github.com/react-native-community/upgrade-helper">
+        <a href="https://github.com/blitz-js/versions-diff-web">
           {' '}
           React Native Community{' '}
         </a>

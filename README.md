@@ -9,12 +9,12 @@
 </p>
 
 <p align="center">
-  <a href="https://circleci.com/gh/react-native-community/upgrade-helper"><img src="https://circleci.com/gh/react-native-community/upgrade-helper.svg?style=shield" alt="CircleCI" title="CircleCI"></a>
+  <a href="https://circleci.com/gh/blitz-js/versions-diff-web"><img src="https://circleci.com/gh/blitz-js/versions-diff-web.svg?style=shield" alt="CircleCI" title="CircleCI"></a>
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shield" alt="PRs Welcome" title="PRs Welcome"></a>
 </p>
 
 <p align="center">
-  <a href="https://react-native-community.github.io/upgrade-helper">
+  <a href="https://diff.blitzjs.com/">
     Open the tool!
   </a>
 </p>
@@ -36,7 +36,7 @@ Aside from this, the tool provides you a couple of cool extra features:
 - a handy "done" button near each file to help you keep track of your process
 - a download button for new binary files
 - the ability to toggle all files by holding the alt key and clicking on expand/collapse
-- ...and we are planning many more features! Check the [enhancement tag](https://github.com/react-native-community/upgrade-helper/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aenhancement) in the issue section.
+- ...and we are planning many more features! Check the [enhancement tag](https://github.com/blitz-js/versions-diff-web/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Aenhancement) in the issue section.
 
 ## 💻 Contributing
 
