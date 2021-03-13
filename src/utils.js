@@ -44,7 +44,7 @@ export const getVersionsInDiff = ({ fromVersion, toVersion }) => {
 }
 
 const baseChangelogURL =
-  'https://github.com/react-native-community/releases/blob/master/CHANGELOG.md'
+  'https://github.com/blitz-js/releases/blob/master/CHANGELOG.md'
 export const getChangelogURL = ({ version }) =>
   `${baseChangelogURL}#v${version.replace('.', '')}0`
 

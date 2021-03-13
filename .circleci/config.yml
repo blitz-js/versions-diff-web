@@ -65,7 +65,7 @@ jobs:
       - run:
           name: Deploy
           command: |
-            if [[ $CIRCLE_PROJECT_USERNAME == "react-native-community" ]]; then
+            if [[ $CIRCLE_PROJECT_USERNAME == "blitz-js" ]]; then
               git config --global user.email $GH_EMAIL
               git config --global user.name $GH_NAME
 
