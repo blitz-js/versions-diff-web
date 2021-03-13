@@ -33,18 +33,18 @@ jobs:
   # Checkout code and caches it
   setup:
     executor: node10
-    working_directory: ~/upgrade-helper
+    working_directory: ~/versions-diff-web
     steps:
       - checkout
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - ~/upgrade-helper
+            - ~/versions-diff-web
 
   # Run lint and tests
   test:
     executor: node10
-    working_directory: ~/upgrade-helper
+    working_directory: ~/versions-diff-web
 
     steps:
       - restore_cache_checkout
@@ -55,7 +55,7 @@ jobs:
   # Deploy website to GitHub Pages
   deploy:
     executor: node10
-    working_directory: ~/upgrade-helper
+    working_directory: ~/versions-diff-web
     steps:
       - restore_cache_checkout
       - run_yarn
