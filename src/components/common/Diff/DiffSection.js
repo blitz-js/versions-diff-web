@@ -24,19 +24,6 @@ const DiffSection = ({
 }) => {
   const [areAllCollapsed, setAllCollapsed] = useState(undefined)
 
-  const getIsUpgradingFrom61To62 = useCallback(() => {
-    const isUpgradingFrom61 = semver.satisfies(
-      fromVersion,
-      '>= 0.61.0 <= 0.62.0'
-    )
-
-    const isUpgradingTo62 = semver.satisfies(toVersion, '>= 0.62.0 <= 0.63.0')
-
-    return isUpgradingFrom61 && isUpgradingTo62
-  }, [fromVersion, toVersion])
-
-  const isUpgradingFrom61To62 = getIsUpgradingFrom61To62()
-
   return (
     <div>
       {title && completedDiffs.length > 0 && (
@@ -56,7 +43,6 @@ const DiffSection = ({
         // `gradlew.bat` from version 0.61 to 0.62 which showed the entire file
         // as a big change
         if (
-          isUpgradingFrom61To62 &&
           diffFile.oldPath.match(/gradlew.bat/) &&
           diffFile.newPath.match(/gradlew.bat/)
         ) {
@@ -64,23 +50,25 @@ const DiffSection = ({
         }
 
         return (
-          <Diff
-            key={`${diffFile.oldRevision}${diffFile.newRevision}`}
-            {...diffFile}
-            // otakustay/react-diff-view#49
-            type={diffFile.type === 'new' ? 'add' : diffFile.type}
-            diffKey={diffKey}
-            diffViewStyle={diffViewStyle}
-            fromVersion={fromVersion}
-            toVersion={toVersion}
-            isDiffCompleted={completedDiffs.includes(diffKey)}
-            onCompleteDiff={handleCompleteDiff}
-            selectedChanges={selectedChanges}
-            onToggleChangeSelection={onToggleChangeSelection}
-            areAllCollapsed={areAllCollapsed}
-            setAllCollapsed={setAllCollapsed}
-            appName={appName}
-          />
+          diffFile?.oldRevision && (
+            <Diff
+              key={`${diffFile.oldRevision}${diffFile.newRevision}`}
+              {...diffFile}
+              // otakustay/react-diff-view#49
+              type={diffFile.type === 'new' ? 'add' : diffFile.type}
+              diffKey={diffKey}
+              diffViewStyle={diffViewStyle}
+              fromVersion={fromVersion}
+              toVersion={toVersion}
+              isDiffCompleted={completedDiffs.includes(diffKey)}
+              onCompleteDiff={handleCompleteDiff}
+              selectedChanges={selectedChanges}
+              onToggleChangeSelection={onToggleChangeSelection}
+              areAllCollapsed={areAllCollapsed}
+              setAllCollapsed={setAllCollapsed}
+              appName={appName}
+            />
+          )
         )
       })}
     </div>

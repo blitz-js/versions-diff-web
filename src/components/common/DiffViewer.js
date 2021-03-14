@@ -108,9 +108,12 @@ const DiffViewer = ({
     const diff = await response.text()
     let sortedDiff = []
     try {
-      sortedDiff = parseDiff(diff).sort(({ newPath }) =>
-        newPath.includes('package.json') ? -1 : 1
-      )
+      const parsedDiff = parseDiff(diff).filter(({ newPath }) => {
+        return newPath !== undefined
+      })
+      sortedDiff = parsedDiff.sort(({ newPath }) => {
+        return newPath.includes('package.json') ? -1 : 1
+      })
     } catch (error) {
       console.log(error)
     }

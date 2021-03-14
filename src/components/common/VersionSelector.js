@@ -84,20 +84,19 @@ const getReleasedVersionsWithCandidates = ({
         latestVersion
       })
 
-    return (
-      isLatestReleaseCandidate ||
-      semver.prerelease(releasedVersion) === null ||
-      (isToVersionAReleaseCandidate &&
-        compareReleaseCandidateVersions({
-          version: toVersion,
-          versionToCompare: releasedVersion
-        })) ||
-      (isLatestAReleaseCandidate &&
-        compareReleaseCandidateVersions({
-          version: latestVersion,
-          versionToCompare: releasedVersion
-        }))
-    )
+    return true
+    // isLatestReleaseCandidate ||
+    // semver.prerelease(releasedVersion) === null ||
+    // (isToVersionAReleaseCandidate &&
+    //   compareReleaseCandidateVersions({
+    //     version: toVersion,
+    //     versionToCompare: releasedVersion
+    //   })) ||
+    // (isLatestAReleaseCandidate &&
+    //   compareReleaseCandidateVersions({
+    //     version: latestVersion,
+    //     versionToCompare: releasedVersion
+    //   }))
   })
 }
 
